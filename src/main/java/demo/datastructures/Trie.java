@@ -53,10 +53,11 @@ public class Trie {
         });
     }
 
+    public Node getRoot() {
+        return root;
+    }
 
-
-
-    private static class Node {
+    public static class Node {
 
         private char character;
         private boolean isValid;
@@ -64,6 +65,18 @@ public class Trie {
 
         private Node(char character) {
             this.character = character;
+        }
+
+        public Map<Character, Node> getNext() {
+            return next;
+        }
+
+        public char getCharacter() {
+            return character;
+        }
+
+        public boolean isValid() {
+            return isValid;
         }
 
         @Override
